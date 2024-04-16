@@ -1,5 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ! Universal styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --text-black: #3a3a3a;
+  --text-gray: #787885;
+  --btn-color: #e02c6d;
+  --footer-background-color: #0a0826;
+}
+
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+
+/* ! Header styles */
+header {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 85px 10px;
+}
+
+/* ? nav styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-black);
+}
+
+.burger-menu-icon {
+  display: none;
+}
+
+.nav-items-and-icons {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-items-and-icons ul {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-items-and-icons ul li {
+  list-style: none;
+}
+
+.nav-items-and-icons ul li a {
+  text-decoration: none;
+  color: var(--text-black);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-items-and-icons svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+/* ! */
+
+/* ! Responsive styles */
+
+/* ? small screens */
+@media screen and (max-width: 576px) {
+  header {
+    padding: 35px 16px;
+  }
+
+  .nav-items-and-icons ul,
+  .search-icon {
+    display: none;
+  }
+
+  .burger-menu-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+}
+
+/* ? Medium screens */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  header {
+    padding: 35px 16px;
+  }
+
+  .nav-items-and-icons ul {
+    display: none;
+  }
+
+  .burger-menu-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
 }
