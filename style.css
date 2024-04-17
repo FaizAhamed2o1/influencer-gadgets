@@ -73,6 +73,73 @@ nav {
   font-weight: bold;
 }
 
+/* ? Banner styles */
+.banner-section {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-text {
+  max-width: 585px;
+}
+
+.banner-title {
+  font-size: 3.25rem;
+  color: var(--text-black);
+  font-weight: bold;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+
+.banner-description {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 16px;
+}
+
+.banner-img {
+  background-image: url("./assets/images/Circle\ design.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 95%;
+  background-position: center;
+  padding: 40px 30px;
+}
+
+.banner-btn {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: transparent;
+  background-color: var(--btn-color);
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+@keyframes left-arrow-move-on-hover {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+.banner-btn:hover svg {
+  animation: left-arrow-move-on-hover 0.7s linear alternate infinite;
+}
+
+.banner-btn svg {
+  font-size: 1.3rem;
+}
+
 /* ! */
 /* ! */
 /* ! */
@@ -87,14 +154,39 @@ nav {
     padding: 35px 16px;
   }
 
+  .burger-menu-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
   .nav-items-and-icons ul,
   .search-icon {
     display: none;
   }
 
-  .burger-menu-icon {
-    display: inline-block;
-    font-size: 1.5rem;
+  .banner-section {
+    flex-direction: column-reverse;
+    margin-top: 24px;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .banner-title {
+    font-size: 1.75rem;
+  }
+
+  .banner-description {
+    font-size: 0.875rem;
+    padding: 0 4px;
+    margin-bottom: 20px;
+  }
+
+  .banner-btn {
+    margin: 0 auto;
+  }
+
+  .banner-img img {
+    width: 100%;
   }
 }
 
@@ -104,12 +196,18 @@ nav {
     padding: 35px 16px;
   }
 
-  .nav-items-and-icons ul {
-    display: none;
-  }
-
   .burger-menu-icon {
     display: inline-block;
     font-size: 1.5rem;
+  }
+
+  .nav-title {
+    flex-grow: 2;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  .nav-items-and-icons ul {
+    display: none;
   }
 }
